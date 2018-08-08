@@ -20,7 +20,7 @@ def add_student(name, year, finished_lab):
 		finished_lab=finished_lab)
 	session.add(student_object)
 	session.commit()
-
+add_student("jenny",11,True)
 def query_by_name(name):
 	"""
 	Find the first student in the database,

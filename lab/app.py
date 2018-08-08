@@ -6,8 +6,8 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
 
-@app.route('/student/<int:student_id>')
-def display_student(student_id):
-    return render_template('student.html', student_id=student_id)
+@app.route('/student/<int:student_id>/<name>/<year>/<labstatus>')
+def display_student(student_id, name,year,labstatus):
+    return render_template('student.html', student_id=student_id, name = student.name ,year=student.year, labstatus= student.finished_lab)
 
 app.run(debug=True)
